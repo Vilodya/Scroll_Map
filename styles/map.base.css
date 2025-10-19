@@ -15,6 +15,14 @@
   overflow: hidden;
 }
 
+.map-content {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-box: view-box;
+  will-change: transform;
+}
+
 /* Стили подписей */
 .label-country,
 .punkt-cn,
