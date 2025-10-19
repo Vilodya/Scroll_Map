@@ -4,8 +4,7 @@ const master = gsap.timeline({
   scrollTrigger: {
     trigger: ".map",
     start: "top 30%",
-    toggleActions: "play none none none",
-    markers: true
+    toggleActions: "play none none none"
   }
 });
 
