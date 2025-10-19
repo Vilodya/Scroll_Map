@@ -1,0 +1,36 @@
+/* Общие стили */
+.div {
+  width: 100%;
+  height: 1000px;
+}
+
+.map {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Стили подписей */
+.label-country,
+.punkt-cn,
+.punkt-kz {
+  opacity: 0;
+}
+
+/* Стили пинов */
+.start-map,
+.end-map {
+  opacity: 0;
+}
+
+/* Стили дорог */
+.route {
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+}

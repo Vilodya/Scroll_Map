@@ -1,0 +1,182 @@
+.map-content {
+  animation: mapZoomOut 1s ease-in-out forwards;
+  animation-delay: 4.5s;
+}
+
+/* Labels */
+#label-zimunai,
+#label-tacheng,
+#label-alashankou,
+#label-ili,
+#label-dulati,
+#label-maykapchagay,
+#label-bahty,
+#label-dostyk,
+#label-nur-joly,
+#label-kalgat,
+#label-kg,
+#label-uz,
+#label-ru,
+#label-br,
+#label-az,
+#label-eu,
+#label-tur,
+#label-taj {
+  animation: fadeIn .6s ease-out forwards;
+}
+
+#label-zimunai, #label-maykapchagay { animation-delay: 0.6s; }
+#label-tacheng, #label-bahty { animation-delay: 1.2s; }
+#label-alashankou, #label-dostyk { animation-delay: 1.8s; }
+#label-ili, #label-nur-joly { animation-delay: 2.4s; }
+#label-dulati, #label-kalgat { animation-delay: 3s; }
+
+#label-kg { animation-delay: 6s; }
+#label-uz { animation-delay: 7s; }
+#label-ru { animation-delay: 8s; }
+#label-br { animation-delay: 9s; }
+#label-az { animation-delay: 10s; }
+#label-eu { animation-delay: 11.5s; }
+#label-tur { animation-delay: 13s; }
+#label-taj { animation-delay: 14s; }
+
+/* Pins */
+#start-map-zimurai,
+#start-map-tacheng,
+#start-map-alashankou,
+#start-map-ili,
+#start-map-dulati,
+#end-map-br,
+#end-map-ru-1,
+#end-map-ru-2,
+#end-map-kaspi,
+#end-map-uz,
+#end-map-kg,
+#end-map-az,
+#end-map-tur,
+#end-map-taj {
+  animation: pinAppear .6s ease-out forwards;
+}
+
+#start-map-zimurai { animation-delay: 0.6s; }
+#start-map-tacheng { animation-delay: 1.2s; }
+#start-map-alashankou { animation-delay: 1.8s; }
+#start-map-ili { animation-delay: 2.4s; }
+#start-map-dulati { animation-delay: 3s; }
+
+#end-map-br { animation-delay: 9s; }
+#end-map-ru-1 { animation-delay: 8s; }
+#end-map-ru-2 { animation-delay: 8s; }
+#end-map-kaspi { animation-delay: 5s; }
+#end-map-uz { animation-delay: 7s; }
+#end-map-kg { animation-delay: 6s; }
+#end-map-az { animation-delay: 10s; }
+#end-map-tur { animation-delay: 13s; }
+#end-map-taj { animation-delay: 14s; }
+
+/* Routes */
+#route-ili-kyrgyzstan,
+#route-alashankou-uz,
+#route-zimunai-kaspi,
+#route-dulati-russia,
+#route-zimunai-russia,
+#route-tacheng-belarus,
+#route-kaspi-baku,
+#route-belarus-eu-1,
+#route-belarus-eu-2,
+#route-uz-turkmenistan,
+#route-uz-tajikistan
+ {
+  stroke-dasharray: 20 8;
+  stroke-dashoffset: 1000;
+  animation: draw 1s linear forwards;
+  will-change: stroke-dashoffset, opacity;
+}
+
+#route-ili-kyrgyzstan { animation-delay: 6s; }
+#route-alashankou-uz { animation-delay: 7s; }
+#route-zimunai-kaspi { animation-delay: 5s; }
+#route-dulati-russia { animation-delay: 8s; }
+#route-zimunai-russia { animation-delay: 8s; }
+#route-tacheng-belarus { animation-delay: 9s; }
+#route-kaspi-baku { animation-delay: 10s; }
+#route-belarus-eu-1 { animation-delay: 11s; }
+#route-belarus-eu-2 { animation-delay: 12s; }
+#route-uz-turkmenistan { animation-delay: 13s; }
+#route-uz-tajikistan { animation-delay: 14s; }
+
+
+/* Countries */
+#country-kg { animation: toRed .6s ease-out forwards; animation-delay: 6s; }
+#country-uz { animation: toGreen .6s ease-out forwards; animation-delay: 7s; }
+#country-ru { animation: toBlue .6s ease-out forwards; animation-delay: 8s; }
+#country-br { animation: toGreen .6s ease-out forwards; animation-delay: 9s; }
+#country-az { animation: toGreen .6s ease-out forwards; animation-delay: 10s; }
+#country-tur { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
+#country-taj { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
+
+@keyframes mapZoomOut {
+  from {
+    transform: translate(-28%, -2%) scale(1.6);
+  }
+  to {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pinAppear {
+  from {
+    opacity: 0; transform: translateY(10px) scale(0.5);
+  }
+  to {
+    opacity: 1; transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toRed {
+  from {
+    opacity: 1;
+    fill: #efefef;
+  }
+  to {
+    opacity: 0.3;
+    fill: #ff0000;
+  }
+}
+
+@keyframes toBlue {
+  from {
+    opacity: 1;
+    fill: #efefef;
+  }
+  to {
+    opacity: 0.2;
+    fill: #0084ff;
+  }
+}
+
+@keyframes toGreen {
+  from {
+    opacity: 1;
+    fill: #efefef;
+  }
+  to {
+    opacity: 0.2;
+    fill: #00f4a7;
+  }
+}
+
+@keyframes draw {
+  0%   { stroke-dashoffset: 1; opacity: 0; }
+  10%  { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
